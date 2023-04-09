@@ -1,8 +1,11 @@
-# 這是BMI產生器 
+## 這是Widgets練習
 
-add：BMI message、年紀、星座 \
-執行檔：hw_bmi.py \
-![pic1](https://user-images.githubusercontent.com/128680931/228880866-31c83122-ce93-4d6e-ba5d-5713fc763fe2.png)
+20230410 update \
+1.新增scrollbar在treeview右邊 \
+2.依據點選值變更treeview內容 \
+image.png
 
-
->>>>>>> 47e2d7aa5e418c8c27e5de4eb8f63807b17601b3
+20230407 create
+建立單選\複選button、選單、scrollbar、event、Jason檔運用 \
+![image](https://user-images.githubusercontent.com/128680931/230654359-f9aa5844-8cb3-43fe-a1c8-62969a36ab04.png) \
+![image](https://user-images.githubusercontent.com/128680931/230654460-09dfe820-2029-4665-b4fd-f66679a3535e.png)
