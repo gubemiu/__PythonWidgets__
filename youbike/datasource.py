@@ -1,7 +1,7 @@
 import requests
 
-sarea_list=None #先給空的，下面執行會取值
-data_list = None
+sarea_list = None  # 先給空的，下面執行會取值 (sarea_list=放區塊list)
+data_list = None  # (data_list=整個原始的jason全部的資料)
 
 
 def getInfo():
@@ -20,10 +20,20 @@ def getInfo():
     sarea_list = sorted(list(sarea_temp))   #把set取出來的值轉成list，因為每次取的值排序都不同，所以用sorted排序
 
 #取得點選區域的所有資料
-def getInfoFromArea(areaName):
+def getInfoFromArea(areaName)->list :
     filter_data= filter(lambda n:n['sarea']==areaName, data_list)  # filter是built-in function，裡面要放function=>lambda n:n['sarea']==areaName
     return list(filter_data)
 
+
+#新增警示區list
+def filter_sbi_warning_data(area_data, sbi_numbers) -> list:
+    filter_data2 = filter(lambda n: n['sbi'] <= sbi_numbers, area_data)
+    return list(filter_data2)
+
+
+def filter_bemp_warning_data(area_data, bemp_numbers) -> list:
+    filter_data3 = filter(lambda n: n['bemp'] <= bemp_numbers, area_data)
+    return list(filter_data3)
 
 getInfo()
 
